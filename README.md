@@ -1,5 +1,3 @@
-# offre-pack-3
-
 # Pack 3 • Prévisions & Accompagnement — Demo Repo
 
 &#x20;&#x20;
