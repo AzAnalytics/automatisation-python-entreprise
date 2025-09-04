@@ -57,6 +57,7 @@ Je vous propose de transformer ces actions manuelles en **processus automatisés
 - Fusion hebdomadaire de plusieurs fichiers fournisseurs
 - Export régulier de données depuis un site ou une API
 - Automatisation de tableaux de bord Excel
+- Voici le projet Streamlit : https://automatisation-python-entreprise.streamlit.app/
 
 ---
 
