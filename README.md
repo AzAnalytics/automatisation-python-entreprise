@@ -1,131 +1,82 @@
-# Pack 3 • Prévisions & Accompagnement — Demo Repo
+# 📦 Pack 3 — Automatisation de Tâches avec Python
 
-&#x20;&#x20;
-
-> Prototype interactif destiné à démontrer le **Pack 3** : modélisation financière tri‑scénario (SaaS B2B), interface Streamlit et export Excel/CSV.
->
-> 📅 *Mis à jour : 4 août 2025*
+> Libérez-vous des tâches répétitives et chronophages : je développe pour vous des scripts Python sur mesure pour automatiser vos processus quotidiens.
 
 ---
 
-## Sommaire
+## 🎯 Objectif de l’offre
 
-1. [Fonctionnalités](#fonctionnalités)
-2. [Architecture du projet](#architecture)
-3. [Installation rapide](#installation)
-4. [Usage](#usage)
-5. [Tests](#tests)
-6. [Déploiement Docker](#docker)
-7. [Roadmap](#roadmap)
-8. [Contribuer](#contribuer)
-9. [Licence](#licence)
+Vous perdez du temps chaque semaine à manipuler des fichiers Excel, envoyer des e-mails manuellement, ou répéter des tâches fastidieuses ?  
+Je vous propose de transformer ces actions manuelles en **processus automatisés**, rapides, fiables et adaptés à votre activité.
 
 ---
 
+## ✅ Ce que vous obtenez
 
+⚙️ **Un ou plusieurs scripts Python automatisés** pour exécuter vos tâches à votre place, avec fiabilité et traçabilité.
 
-## 1. Fonctionnalités ⭐
+📌 **Exemples de tâches automatisables :**
+- Nettoyage, tri, fusion ou formatage de fichiers (Excel, CSV…)
+- Génération automatique de rapports
+- Envoi d’e-mails programmés avec pièces jointes
+- Web scraping ou extraction de données
+- Connexion et synchronisation avec vos outils métiers (Drive, CRM, API, etc.)
 
-- **Moteur de prévision** 3 états (P&L, BS, CF) sur 12‑60 mois.
-- **Trois scénarios** pré‑paramétrés (Base, Pessimiste, Ambitieux) + sliders pour custom.
-- **KPIs clés** : ARR M12, runway, EBITDA M1.
-- **Graphiques Plotly** : Cash, Revenue, EBITDA.
-- **Export** CSV & Excel (meta incluse).
-- **Tests Pytest** (100 % lignes moteur).
+📂 **Livrables inclus :**
+- Code source propre et documenté
+- Fichier(s) de configuration ou d'exemple
+- Guide d'utilisation simple (PDF ou Notion)
+- Vidéo explicative de prise en main (optionnel)
+- Support post-livraison (jusqu’à 5 jours)
 
+---
 
+## 💼 Idéal pour...
 
-## 2. Architecture du projet 🏗
+- PME, indépendants, services administratifs ou opérationnels
+- RH, finance, comptabilité, marketing, logistique
+- Toute structure qui souhaite **gagner du temps** et **réduire les erreurs humaines**
 
-```
-├── app/
-│   └── main.py         # Interface Streamlit
-├── model/
-│   ├── __init__.py
-│   └── forecast.py     # simulate(), Scenario
-├── tests/
-│   └── test_forecast.py
-├── requirements.txt    # Dépendances runtime/dev
-├── Dockerfile          # Image prod‑ready
-└── README.md           # Ce fichier
-```
+---
 
+## 💰 Tarifs & délais
 
+- **Tâche simple (1 script, peu de logique) : à partir de 350 € HT**
+- **Automatisation complète ou avec logique métier : à partir de 490 € HT**
+- **Projets complexes (plusieurs scripts, API, interconnexions) : sur devis**
+- **Délai moyen : 2 à 5 jours ouvrés**
 
-## 3. Installation rapide ⚡
+💡 *Un appel ou un brief rapide suffit pour évaluer la faisabilité et vous proposer un devis transparent, sans engagement.*
 
-```bash
-# 1. Clone
-git clone https://github.com/your‑org/offre‑pack‑3.git
-cd offre‑pack‑3
+---
 
-# 2. Environnement Python 3.12
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+## 🧩 Exemples concrets
 
-# 3. Dépendances
-pip install -r requirements.txt
-```
+- Envoi automatique chaque lundi d’un rapport PDF par mail
+- Nettoyage de bases clients avant import dans CRM
+- Fusion hebdomadaire de plusieurs fichiers fournisseurs
+- Export régulier de données depuis un site ou une API
+- Automatisation de tableaux de bord Excel
 
+---
 
+## 🧪 Audit gratuit
 
-## 4. Usage 🖥️
+Vous vous demandez si une tâche que vous réalisez à la main est automatisable ?  
+Envoyez-moi un exemple de cas ou un fichier type, je vous réponds sous 24h avec une proposition personnalisée.
 
-```bash
-streamlit run app/main.py
-# Ouvre http://localhost:8501
-```
+📧 az.analytics.pro@gmail.com  
+📞 +33 7 71 57 55 58  
+🌐 [https://github.com/AzAnalytics](https://github.com/AzAnalytics)
 
-1. Choisissez un scénario dans la sidebar ou ajustez les sliders.
-2. Consultez les KPIs & graphiques.
-3. Téléchargez le CSV ou l’Excel généré.
+---
 
+## 📄 Cahier des charges détaillé
 
+👉 [Voir le cahier des charges complet ici](./cahier_des_charges_pack_3.md)
 
-## 5. Lancer les tests 🧪
+---
 
-```bash
-pytest -q   # doit afficher 4 passed
-```
+## 🚀 Prêt à automatiser votre quotidien ?
 
-
-
-## 6. Build & run Docker 🐳
-
-```bash
-docker build -t pack3-demo .
-docker run -p 8501:8501 pack3-demo
-# Streamlit dispo sur http://localhost:8501
-```
-
-
-
-## 7. Roadmap 🛣️
-
-La feuille de route ci‑dessous décrit les prochaines évolutions prévues pour transformer cette démo en véritable produit Pack 3.  *(☐ = à faire / ✔️ = terminé)*
-
-| ⚑  | Lot                 | Tâches détaillées                                                                                     | Charge | Statut |
-| -- | ------------------- | ----------------------------------------------------------------------------------------------------- | ------ | ------ |
-| 🔵 | **UX**              | • Dark mode avec `st.theme`• Logo/charte client (config YAML)• I18N FR/EN via `session_state['lang']` | 0.5 j  | ☐      |
-| 🔵 | **Analyse**         | • Tornado chart (sensibilité EBITDA)• Table « What‑If » ±5 % drivers                                  | 0.5 j  | ☐      |
-| 🟡 | **API**             | • FastAPI `/simulate` (JSON ↔ DataFrame)• Doc OpenAPI + tests d’intégration                           | 1 j    | ☐      |
-| 🟡 | **Données réelles** | • Connexion BigQuery (Pack 2)• Comparatif *budget vs actual* dans Streamlit                           | 1 j    | ☐      |
-| 🟢 | **CI/CD**           | • Docker (<300 MB)• Pipeline Render.com auto‑deploy• Badge *Live Demo*                                | 0.5 j  | ✔️     |
-| 🟢 | **Sécurité**        | • Basic Auth Render• Dependabot + `pip‑audit`                                                         | 0.25 j | ✔️     |
-
-*Charge restante estimée : ****≈ 3 jours****.*
-
-
-
-## 8. Contribuer 🤝. Contribuer 🤝
-
-1. Ouvrez une *issue* pour discuter d’une feature ou d’un bug.
-2. Fork → branche `feature/x` → PR.
-3. La CI doit passer (`pytest`).
-
-
-
-## 9. Licence 📑
-
-MIT © 2025 — Feel free to fork, adapt and credit.
-
+> Contactez-moi ou ouvrez une issue GitHub pour discuter de votre projet.
