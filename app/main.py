@@ -26,7 +26,7 @@ import plotly.express as px
 import streamlit as st
 
 # Local business logic
-from model.forecast import Scenario, simulate  # noqa: E402
+from model.forecast import Scenario, simulate
 
 st.set_page_config(
     page_title="Pack 3 Forecast Demo",
